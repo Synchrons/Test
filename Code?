@@ -1,0 +1,3 @@
+AddEventHandler('chatMessage', function(source, name, message)
+  PerformHttpRequest('https://discordapp.com/api/webhooks/425831779270918144/eJiw1GfZFHu6NjgkTCoI8rS-XJbsdemBlyh_68nrsSAhq-GXeB_Y09aCXFg312QGLLUL', function(err, text, headers) end, 'POST', json.encode({username = name, content = message}), { ['Content-Type'] = 'application/json' })
+end)
